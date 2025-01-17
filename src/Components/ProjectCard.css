@@ -1,0 +1,125 @@
+.card {
+    width: 80%;
+    height: 200px;
+    margin-bottom: 15px;
+    background: #243137;
+    position: relative;
+    left: 10%;
+    display: grid;
+    place-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .border {
+    position: absolute;
+    inset: 0px;
+    border: 2px solid #bd9f67;
+    opacity: 0;
+    transform: rotate(10deg);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .bottom-text {
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+    font-size: 6px;
+    text-transform: uppercase;
+    padding: 0px 5px 0px 8px;
+    color: #bd9f67;
+    font-weight: bold;
+    font-size: 12px;
+    background: #243137;
+    opacity: 0;
+    letter-spacing: 5px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .content {
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .content .title {
+    color: #bd9f67;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+  
+  .content .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .content .logo .logo1,
+  .content .logo .logo2 {
+    height: 33px;
+    color: #bd9f67;
+  }
+  
+  .content .logo-bottom-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 30px;
+    color: #bd9f67;
+    padding-left: 8px;
+    font-size: 20px;
+    font-weight: bolder;
+    opacity: 0;
+    letter-spacing: normal;
+    transition: all 0.5s ease-in-out 0.1s;
+  }
+  
+  .card:hover {
+    border-radius: 0;
+    transform: scale(1.1);
+  }
+  
+  .card:hover .title {
+    opacity: 0;
+  }
+  
+  .card:hover .logo {
+    opacity: 1;
+  }
+  
+  .card:hover .border {
+    inset: 15px;
+    opacity: 1;
+    transform: rotate(0);
+  }
+  
+  .card:hover .bottom-text {
+    letter-spacing: 3px;
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+  
+  .card:hover .content .logo-bottom-text {
+    opacity: 1;
+    letter-spacing: 5px;
+  }
