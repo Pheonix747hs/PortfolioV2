@@ -41,8 +41,17 @@ function App() {
           overflowX: "hidden", // Disable horizontal scrolling
           fontSize: "24px",
           textAlign: "center",
+          scrollbarWidth: "none", // Hide scrollbar for Firefox
         }}
       >
+        <style>
+          {`
+          /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+          div::-webkit-scrollbar {
+            display: none;
+          }
+          `}
+        </style>
         <ProjectPage />
       </div>
     </>
