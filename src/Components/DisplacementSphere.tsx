@@ -41,7 +41,7 @@ const DisplacementSphere: React.FC<DisplacementSphereProps> = ({
         baseColor: { value: new THREE.Color(sphereColor) },
         tipColor: { value: new THREE.Color(0xd3d3d3) },
         fogColor: { value: new THREE.Color(0x111111) },
-        fogStart: { value: 30.0 },
+        fogStart: { value: 25.0 },
         fogEnd: { value: 58.0 },
       },
       vertexShader: `
@@ -98,8 +98,8 @@ const DisplacementSphere: React.FC<DisplacementSphereProps> = ({
             float noiseValue = turbulence(normal * 3.5 + time);
             vNoise = noiseValue;
             
-            pos += normal * noiseValue * 9.0;
-            
+            pos += normal * noiseValue * 15.0;  // amplitude control
+             
             vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
             gl_Position = projectionMatrix * mvPosition;
             vFogDepth = -mvPosition.z;
@@ -130,7 +130,7 @@ const DisplacementSphere: React.FC<DisplacementSphereProps> = ({
       `,
     });
 
-    const geometry = new THREE.SphereGeometry(12, 96, 96);
+    const geometry = new THREE.SphereGeometry(10, 96, 96);
     const sphere = new THREE.Mesh(geometry, material) as ExtendedMesh;
     renderer.setSize(window.innerWidth, window.innerHeight);
     camera.position.z = 52;
@@ -161,13 +161,13 @@ const DisplacementSphere: React.FC<DisplacementSphereProps> = ({
 
       if (windowWidth <= 696) {
         sphere.position.x = 14;
-        sphere.position.y = 10;
+        sphere.position.y = 16;
       } else if (windowWidth <= 1024) {
         sphere.position.x = 18;
         sphere.position.y = 14;
       } else {
-        sphere.position.x = 22;
-        sphere.position.y = 16;
+        sphere.position.x = 40;
+        sphere.position.y = 20;
       }
     };
 

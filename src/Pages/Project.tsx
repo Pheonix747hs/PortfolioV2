@@ -1,5 +1,5 @@
 import { Code, Github, Globe, Laptop } from "lucide-react";
-import { ProjectCard } from "./ProjectCard";
+import { ProjectCard } from "../Components/ProjectCard";
 import { SiCplusplus } from "react-icons/si";
 
 function ProjectPage() {
@@ -42,7 +42,7 @@ function ProjectPage() {
         <h1 className="text-7xl font-extrabold  text-[#f1b138] mb-4 text-center">
           My Projects
         </h1>
-        <p className="text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-center mb-12 max-w-2xl mx-auto text-xl">
           Explore my portfolio of projects showcasing web development, design,
           and open source contributions. Hover over each card to learn more
           about the project.

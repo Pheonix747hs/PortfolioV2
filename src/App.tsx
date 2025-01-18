@@ -1,6 +1,17 @@
 import "./styles.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import DisplacementSphere from "./Components/DisplacementSphere";
-import ProjectPage from "./Components/Project";
+import ProjectPage from "./Pages/Project";
+import HomePage from "./Pages/Home";
+import { Navbar } from "./Components/Navbar";
+import { Home, FileText, User, Mail } from "lucide-react";
+
+const navItems = [
+  { icon: <Home size={24} />, label: "Home", href: "/" },
+  { icon: <FileText size={24} />, label: "Projects", href: "/projects" },
+  { icon: <User size={24} />, label: "About", href: "/about" },
+  { icon: <Mail size={24} />, label: "Contact", href: "/contact" },
+];
 
 function App() {
   return (
@@ -30,7 +41,15 @@ function App() {
           }
           `}
         </style>
-        <ProjectPage />
+        <Navbar items={navItems} />
+        <Router>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<ProjectPage />} />
+            <Route path="/about" element={<div>About Page</div>} />
+            <Route path="/contact" element={<div>Contact Page</div>} />
+          </Routes>
+        </Router>
       </div>
     </>
   );
