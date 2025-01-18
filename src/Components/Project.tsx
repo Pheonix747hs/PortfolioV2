@@ -37,17 +37,17 @@ function ProjectPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 py-20">
+    <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-[#bd9f67] mb-4 text-center">
+        <h1 className="text-7xl font-extrabold  text-[#f1b138] mb-4 text-center">
           My Projects
         </h1>
-        <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-center mb-12 max-w-2xl mx-auto">
           Explore my portfolio of projects showcasing web development, design,
           and open source contributions. Hover over each card to learn more
           about the project.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        <div className="grid grid-cols-2 gap-10 justify-items-center">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}

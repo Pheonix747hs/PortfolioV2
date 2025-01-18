@@ -1,5 +1,5 @@
 import "./styles.css";
-import DisplacementSphere from "./Components/DisplacementSphere";
+import DisplacementSphere from "./Components/DisplacementSphere2";
 import ProjectPage from "./Components/Project";
 
 // function App() {
