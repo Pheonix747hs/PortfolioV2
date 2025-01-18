@@ -6,7 +6,13 @@ interface ExtendedMesh extends THREE.Mesh {
   modifier?: number;
 }
 
-const DisplacementSphere: React.FC = () => {
+interface DisplacementSphereProps {
+  sphereColor?: number;
+}
+
+const DisplacementSphere: React.FC<DisplacementSphereProps> = ({
+  sphereColor = 0xbd9f67,
+}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const start = useRef(Date.now());
 
@@ -32,7 +38,7 @@ const DisplacementSphere: React.FC = () => {
     const material = new THREE.ShaderMaterial({
       uniforms: {
         time: { value: 0 },
-        baseColor: { value: new THREE.Color(0xbd9f67) },
+        baseColor: { value: new THREE.Color(sphereColor) },
         tipColor: { value: new THREE.Color(0xd3d3d3) },
         fogColor: { value: new THREE.Color(0x111111) },
         fogStart: { value: 30.0 },
@@ -199,7 +205,7 @@ const DisplacementSphere: React.FC = () => {
     const animate = () => {
       animationFrameId = requestAnimationFrame(animate);
       material.uniforms.time.value = 0.00005 * (Date.now() - start.current);
-      sphere.rotation.z += 0.006;
+      sphere.rotation.z += 0.001;
       renderer.render(scene, camera);
       TWEEN.update();
     };
