@@ -15,8 +15,8 @@ interface ProjectCardProps {
 
 export const ProjectCard: FC<ProjectCardProps> = ({ repository }) => {
   const [lang, setlang] = useState({});
-  const [loading, setLoading] = useState(true);
-  const token = import.meta.env.VITE_SECRET_TOKEN;
+  // const [loading, setLoading] = useState(true);
+  // const token = import.meta.env.VITE_SECRET_TOKEN;
 
   useEffect(() => {
     const fetchlang = async () => {
@@ -38,7 +38,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({ repository }) => {
         );
         setlang(data);
       } finally {
-        setLoading(false);
+        // setLoading(false);
       }
     };
 
