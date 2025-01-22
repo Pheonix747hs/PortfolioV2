@@ -58,11 +58,11 @@ export const ProjectCard: FC<ProjectCardProps> = ({ repository }) => {
           <div className="flex place-content-start justify-between mb-4">
             <div className="flex items-center space-x-3"></div>
           </div>
-          <p className="text-[#bd9f67] text-sm mb-2">
+          <p className="text-[#bd9f67] text-base justify-center">
             {repository.description || "No description available"}
           </p>
           {
-            <div className="text-sm font-medium text-[#bd9f67]">
+            <div className="text-sm font-bold italic text-[#bd9f67] m-3">
               {Object.keys(lang).join(", ")}
             </div>
           }
