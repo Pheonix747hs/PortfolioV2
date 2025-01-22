@@ -1,6 +1,5 @@
 import { FC, useEffect, useState } from "react";
 import "./ProjectCard.css";
-import { Code, Github, Laptop } from "lucide-react";
 
 interface Repository {
   name: string;
