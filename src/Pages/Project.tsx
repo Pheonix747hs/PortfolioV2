@@ -12,7 +12,7 @@ function ProjectPage() {
   const [repos, setRepos] = useState<Repository[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  // const token = import.meta.env.VITE_SECRET_TOKEN;
+  const token = import.meta.env.VITE_SECRET_TOKEN;
 
   useEffect(() => {
     const fetchRepos = async () => {
@@ -20,9 +20,9 @@ function ProjectPage() {
         const response = await fetch(
           "https://api.github.com/users/Pheonix747hs/repos",
           {
-            // headers: {
-            //   Authorization: `Bearer ${token}`,
-            // },
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
           }
         );
         if (!response.ok) {
