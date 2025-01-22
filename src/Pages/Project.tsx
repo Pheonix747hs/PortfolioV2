@@ -6,6 +6,8 @@ interface Repository {
   description: string;
   language: object;
   languages_url: string;
+  homepage: string;
+  has_pages: string;
 }
 
 function ProjectPage() {

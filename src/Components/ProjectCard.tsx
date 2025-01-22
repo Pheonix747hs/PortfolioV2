@@ -7,6 +7,8 @@ interface Repository {
   description: string;
   language: object;
   languages_url: string;
+  homepage: string;
+  has_pages: string;
 }
 
 interface ProjectCardProps {
@@ -50,25 +52,48 @@ export const ProjectCard: FC<ProjectCardProps> = ({ repository }) => {
     <div className="card">
       <div className="border" />
       <div className="content">
-        <h2 className="title">{repository.name}</h2>
+        <h2 className="title">
+          <div>{repository.name}</div>
+        </h2>
         <div className="details">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center space-x-3">
-              <Github className="h-6 w-6 text-[#bd9f67]" />
-              {repository.language && (
-                <Code className="h-6 w-6 text-[#bd9f67]" />
-              )}
-            </div>
-            <Laptop className="h-6 w-6 text-[#bd9f67]" />
+          <div className="flex place-content-start justify-between mb-4">
+            <div className="flex items-center space-x-3"></div>
           </div>
           <p className="text-[#bd9f67] text-sm mb-2">
             {repository.description || "No description available"}
           </p>
-          {repository.language && (
+          {
             <div className="text-sm font-medium text-[#bd9f67]">
               {Object.keys(lang).join(", ")}
             </div>
-          )}
+          }
+          {/* Add buttons */}
+          <div className="button-container">
+            <a
+              href={`https://github.com/Pheonix747hs/${repository.name}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button"
+            >
+              View GitHub
+            </a>
+            {repository.homepage || repository.has_pages ? (
+              <a
+                href={
+                  repository.homepage
+                    ? repository.homepage
+                    : `https://pheonix747hs.github.io/${repository.name}`
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button"
+              >
+                Visit Live Site
+              </a>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
       </div>
     </div>
