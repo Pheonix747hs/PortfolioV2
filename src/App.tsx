@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import DisplacementSphere from "./Components/DisplacementSphere";
 import ProjectPage from "./Pages/Project";
 import HomePage from "./Pages/Home";
+import { TimelineDemo } from "./Pages/About";
 import { Navbar } from "./Components/Navbar";
 import { Home, FileText, User, Mail } from "lucide-react";
 
@@ -35,7 +36,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/projects" element={<ProjectPage />} />
-            <Route path="/about" element={<div>About Page</div>} />
+            <Route path="/about" element={<TimelineDemo />} />
             <Route path="/contact" element={<div>Contact Page</div>} />
           </Routes>
         </Router>
