@@ -9,7 +9,7 @@ interface ExtendedMesh extends THREE.Mesh {
 interface DisplacementSphereProps {
   sphereColor?: number;
 }
-
+// 0xbd9f67
 const DisplacementSphere: React.FC<DisplacementSphereProps> = ({
   sphereColor = 0xbd9f67,
 }) => {
