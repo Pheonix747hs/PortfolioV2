@@ -35,7 +35,6 @@ const DisplacementSphere: React.FC<DisplacementSphereProps> = ({
     const scene = new THREE.Scene();
 
     let sphereRadius = 10;
-    let amplitude = 15.0;
 
     // Create custom shader material
     const material = new THREE.ShaderMaterial({
@@ -159,17 +158,17 @@ const DisplacementSphere: React.FC<DisplacementSphereProps> = ({
       if (windowWidth <= 696) {
         sphere.geometry.dispose();
         sphere.geometry = new THREE.SphereGeometry(1, 96, 96);
-        amplitude = 10.0;
+
         sphere.position.set(10, 25, 0);
       } else if (windowWidth <= 1024) {
         sphere.geometry.dispose();
         sphere.geometry = new THREE.SphereGeometry(1, 96, 96);
-        amplitude = 12.0;
+
         sphere.position.set(17, 20, 0);
       } else {
         sphere.geometry.dispose();
         sphere.geometry = new THREE.SphereGeometry(10, 96, 96);
-        amplitude = 15.0;
+
         sphere.position.set(40, 20, 0);
       }
     };
