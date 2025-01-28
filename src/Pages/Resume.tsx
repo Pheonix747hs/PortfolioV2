@@ -11,7 +11,7 @@ export function PDFViewer({ fileId, title }: PDFViewerProps) {
 
   return (
     <div className="w-full max-w-4xl md:mx-auto  p-4">
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden ml-11 calc(h-screen - 8rem) md:h-auto ">
+      <div className="bg-white rounded-lg shadow-lg overflow-hidden ml-11 calc(h-screen - 8rem) md:h-[95vh] ">
         {title && (
           <div className="p-4 border-b border-gray-200">
             <h2 className="text-xl font-semibold text-gray-800">{title}</h2>

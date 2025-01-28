@@ -103,7 +103,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         </div>
         <div className="flex items-center justify-center">
           <img
-            src="src/assets/profile1.jpg"
+            src="/profile1.jpg"
             alt=""
             className="w-[80vw] md:w-[30vw] rounded-full border-[7px] border-[#b99757]"
           />
