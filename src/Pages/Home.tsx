@@ -25,20 +25,20 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-4">
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 ml-10">
       <div
         className={`transform transition-all duration-1000 ${
           visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
       >
-        <Code size={64} className="text-[#bd9f67] mb-8" />
+        <Code size={64} className="text-[#bd9f67] w-7 md:w-20 lg:mb-6 " />
       </div>
-      <h1 className="text-4xl md:text-6xl font-bold text-[#bd9f67] mb-6 text-center">
+      <h1 className="text-[24px] md:text-6xl font-bold text-[#bd9f67] mb-6 text-center">
         {text}
         <span className="animate-blink">|</span>
       </h1>
       <p
-        className={`text-gray-400 text-center max-w-2xl transition-all duration-1000 ${
+        className={`text-[20px] md:text-2xl text-gray-400 text-center max-w-[20rem] md:max-w-2xl transition-all duration-1000 ${
           visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
       >

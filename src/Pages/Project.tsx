@@ -85,7 +85,7 @@ function ProjectPage() {
           }
           `}
       </style>
-      <div className="min-h-screen py-20">
+      <div className="min-h-screen py-20 ml-11 md:ml-16">
         <div className="container mx-auto px-4">
           <h1 className="text-7xl font-extrabold  text-[#b99757] mb-4 text-center">
             My Projects
@@ -95,7 +95,7 @@ function ProjectPage() {
             and open source contributions. Hover over each card to learn more
             about the project.
           </p>
-          <div className="grid grid-cols-2 gap-10 justify-items-center">
+          <div className="grid md:grid-cols-2 gap-10 justify-items-center">
             {repos.map((repo) => (
               <ProjectCard key={repo.name} repository={repo} />
             ))}

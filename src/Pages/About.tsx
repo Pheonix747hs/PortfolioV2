@@ -1,147 +1,180 @@
-import React from "react";
-import { Timeline } from "@/components/ui/timeline";
+import { Timeline } from "@/Components/ui/timeline";
+import "../styles.css";
 
 export function TimelineDemo() {
   const data = [
     {
-      title: "2024",
+      title: "July 24 - July 25 4th Year",
       content: (
         <div>
-          <p className="text-[#b99757] text-lg font-normal mb-8">
-            Built and launched Aceternity UI and Aceternity UI Pro from scratch
+          <p className="text-white text-left text-lg font-normal mb-4">
+            <p>
+              This is the year everything was building upto, the final streach.
+              Most of this year is being spent studying for exams and polishing
+              my skills for placement
+            </p>
+            <p className="pt-3">
+              I have also undertaken my most ambitious project yet, building a
+              full fledged AR Individual learning Application,{" "}
+              <a
+                href="https://github.com/Pheonix747hs/WPF_PDF "
+                target="_blank"
+                className="link"
+              >{`{ARia}`}</a>
+              for short.
+            </p>
           </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://assets.aceternity.com/templates/startup-1.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <img
-              src="https://assets.aceternity.com/templates/startup-2.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <img
-              src="https://assets.aceternity.com/templates/startup-3.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <img
-              src="https://assets.aceternity.com/templates/startup-4.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
         </div>
       ),
     },
     {
-      title: "Early 2023",
+      title: "July 23 - June 24 3rd Year",
       content: (
         <div>
-          <p className="text-[#b99757] text-xs md:text-sm font-normal mb-8">
-            I usually run out of copy, but when I see content this big, I try to
-            integrate lorem ipsum.
+          <p className="text-white text-left text-lg font-normal mb-4">
+            <p>
+              My third year is when i got the first taste of real life projects,
+              during this year we were expected to complete a 1-4 month
+              internship while keeping a record of each day.
+            </p>
+            <p className="pt-3">
+              I was able to secure 2 internships in the 2nd semester where i got
+              to work on multiple Web frameworks and also gained familiarity
+              with both backend and frontend technologies.{"   "}
+              <a
+                href="https://github.com/Pheonix747hs/xpedio-student-interns "
+                target="_blank"
+                className="link"
+              >{`{xpedio-student-interns}`}</a>
+              {"\n"}
+              <a
+                href="https://github.com/Pheonix747hs/Website-for-Financial-Client"
+                target="_blank"
+                className="link"
+              >{`{Website-for-Financial-Client}`}</a>
+            </p>
           </p>
-          <p className="text-[#b99757] text-xs md:text-sm font-normal mb-8">
-            Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <img
-              src="https://assets.aceternity.com/features-section.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <img
-              src="https://assets.aceternity.com/pro/bento-grids.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <img
-              src="https://assets.aceternity.com/cards.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
         </div>
       ),
     },
     {
-      title: "Changelog",
+      title: "Aug 22 - June 23 2nd Year",
       content: (
         <div>
-          <p className="text-[#b99757] text-xs md:text-sm font-normal mb-4">
-            Deployed 5 new components on Aceternity today
+          <p className="text-white text-left text-lg font-normal mb-4">
+            <p>
+              During my second year, most of my time was dedicated to studying,
+              as the curriculum became significantly more challenging.
+            </p>
+            <p className="pt-3">
+              Alongside my academic pursuits, I also took the opportunity to
+              deepen my understanding of C#. One of my most notable projects
+              during this time was creating a PDF reader using the .NET
+              framework
+              <a
+                href="https://github.com/Pheonix747hs/WPF_PDF "
+                target="_blank"
+                className="link"
+              >{`{WPF_PDF}`}</a>
+            </p>
           </p>
-          <div className="mb-8">
-            <div className="flex gap-2 items-center text-[#b99757] text-xs md:text-sm">
-              ✅ Card grid component
-            </div>
-            <div className="flex gap-2 items-center text-[#b99757] text-xs md:text-sm">
-              ✅ Startup template Aceternity
-            </div>
-            <div className="flex gap-2 items-center text-[#b99757] text-xs md:text-sm">
-              ✅ Random file upload lol
-            </div>
-            <div className="flex gap-2 items-center text-[#b99757] text-xs md:text-sm">
-              ✅ Himesh Reshammiya Music CD
-            </div>
-            <div className="flex gap-2 items-center text-[#b99757] text-xs md:text-sm">
-              ✅ Salman Bhai Fan Club registrations open
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <img
-              src="https://assets.aceternity.com/features-section.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <img
-              src="https://assets.aceternity.com/pro/bento-grids.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <img
-              src="https://assets.aceternity.com/cards.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Jan - July 2022 First Year",
+      content: (
+        <div>
+          <p className="text-white text-left text-lg font-normal mb-4">
+            <p>
+              My first year started in January 2022, I had chosen to purse BE
+              Computer Engineering degree which was a product of my passion and
+              love for coding
+            </p>
+            <p className="pt-3">
+              Going along with the spirit of progression, I decided to learn
+              low-level languages and got into C# because of its use in gaming,
+              one of my favorite hobbies. After a few months messing around in
+              Unity, I created a small playground where my character can run,
+              slide, jump, wall-run, and grapple.
+              <a
+                href="https://github.com/Pheonix747hs/basic-movement-unity "
+                target="_blank"
+                className="link"
+              >{`{Unity Movement}`}</a>
+            </p>
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Early 2020",
+      content: (
+        <div>
+          <p className="text-white text-left text-lg font-normal mb-4">
+            <p>
+              Around this time i was studying in 12th grade and had decided id
+              be following the Engineering stream in life, most of this time
+              period upto 2021 was spent preparing for entrance exams [JEE and
+              CET]
+            </p>
+            <p className="pt-3">
+              During this time along with studies i also kept exploring
+              AutoHotkey and Python, after messing around with the windows API i
+              created another application in Autohotkey called{" "}
+              <a
+                href="https://github.com/Pheonix747hs/Battery-Alert"
+                target="_blank"
+                className="link"
+              >
+                Battery Alert
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://github.com/Pheonix747hs/microphone-toggle"
+                target="_blank"
+                className="link"
+              >
+                {" "}
+                Microphone Toggle
+              </a>
+            </p>
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "2018",
+      content: (
+        <div>
+          <p className="text-white text-left text-lg font-normal mb-4">
+            <p>
+              I got into coding back in 10th grade, during my final year of
+              school. The first language I worked with was a pretty niche one
+              called AutoHotkey.
+            </p>
+            {"\n "}
+            <p className="pt-3">
+              At the time, I just wanted to create a script that would
+              automatically add songs to my Spotify playlists whenever I hit
+              specific hotkeys. This eventually lead to the final version{" "}
+              <a
+                href="https://github.com/Pheonix747hs/spotify-controller"
+                target="_blank"
+                className="link"
+              >
+                {" "}
+                Spotify Controller V3
+              </a>
+            </p>
+            {"\n "}
+            <p className="pt-3">
+              By the time I finished the project, I realized I actually enjoyed
+              the whole process. That first experience sparked my passion for
+              programming, setting the foundation for my journey into the world
+              of technology.
+            </p>
+          </p>
         </div>
       ),
     },

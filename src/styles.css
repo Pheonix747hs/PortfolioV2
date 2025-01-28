@@ -48,3 +48,16 @@ canvas {
   width: 100vw;
   height: 100vh;
 }
+
+
+.link {
+  color: #c4801b;
+  text-decoration:underline;
+  background-color: #11111171;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.iconjump:hover {
+  cursor:pointer;
+ }

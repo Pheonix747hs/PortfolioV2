@@ -1,17 +1,18 @@
 import "./styles.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import DisplacementSphere from "./Components/DisplacementSphere";
+import DisplacementSphere from "./Components/DisplacementSphere2";
 import ProjectPage from "./Pages/Project";
 import HomePage from "./Pages/Home";
 import { TimelineDemo } from "./Pages/About";
 import { Navbar } from "./Components/Navbar";
-import { Home, FileText, User, Mail } from "lucide-react";
+import { Home, FileText, User, FolderOpenDot } from "lucide-react";
+import { PDFViewer } from "./Pages/Resume";
 
 const navItems = [
   { icon: <Home size={24} />, label: "Home", href: "/" },
-  { icon: <FileText size={24} />, label: "Projects", href: "/projects" },
+  { icon: <FolderOpenDot />, label: "Projects", href: "/projects" },
   { icon: <User size={24} />, label: "About", href: "/about" },
-  { icon: <Mail size={24} />, label: "Contact", href: "/contact" },
+  { icon: <FileText size={24} />, label: "Resume", href: "/resume" },
 ];
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           width: "100vw", // Set a width for the scrollable container
           height: "100vh", // Set a height for the scrollable container
         }}
+        className="md:h-full md:w-full"
       >
         <Navbar items={navItems} />
         <Router>
@@ -37,7 +39,10 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/projects" element={<ProjectPage />} />
             <Route path="/about" element={<TimelineDemo />} />
-            <Route path="/contact" element={<div>Contact Page</div>} />
+            <Route
+              path="/resume"
+              element={<PDFViewer fileId="1wWL-4q0aVaN2sZmvm8QZdqNhKlXHQeBN" />}
+            />
           </Routes>
         </Router>
       </div>

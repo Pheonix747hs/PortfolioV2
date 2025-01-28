@@ -51,11 +51,14 @@
   visibility: hidden;
   transform: translateY(20px);
   transition: all 0.5s ease-in-out;
+
+
 }
 
 .card:hover {
   border-radius: 0;
-  transform: scale(1.1);
+  transform: scale(1.05);
+  border-radius: 4px;
 }
 
 .card:hover .border {
@@ -65,7 +68,28 @@
 }
 
 .card:hover .title {
-  transform: translateY(-60px);
+  transform: translateY(-90px);
+}
+
+@media (min-width: 759px) {
+  .card:hover .title {
+    transform: translateY(-50px);
+  }
+
+  .button-container {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .card:hover {
+    border-radius: 0;
+    transform: scale(1.1);
+    border-radius: 6px;
+  }
 }
 
 .card:hover .details {

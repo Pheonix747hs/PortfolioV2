@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import { Code } from 'lucide-react';
+import { FC } from "react";
+import { Code } from "lucide-react";
 
 interface NavItem {
   icon: React.ReactNode;
@@ -16,27 +16,31 @@ export const Navbar: FC<NavbarProps> = ({ items }) => {
   const currentPath = window.location.pathname;
 
   return (
-    <nav className="w-20 bg-[#1a1a1a] flex flex-col items-center py-6 fixed h-screen">
+    <nav className="w-12 lg:w-[3.4rem] bg-[#1a1a1a] flex flex-col items-center py-6 fixed h-screen ">
       {/* Logo at the top */}
       <div className="mb-12">
-        <Code size={32} className="text-[#bd9f67]" />
+        <Code size={32} className="text-[#bd9f67] w-7 md:w-20" />
       </div>
 
       {/* Navigation items in the middle */}
       <div className="flex flex-col items-center gap-8">
         {items.map((item, index) => {
           const isActive = currentPath === item.href;
-          
+
           return (
             <a
               key={index}
               href={item.href}
               className="group relative flex flex-col items-center"
             >
-              <div 
+              <div
                 className={`
                   transition-colors duration-200 relative
-                  ${isActive ? 'text-[#bd9f67]' : 'text-gray-400 hover:text-[#bd9f67]'}
+                  ${
+                    isActive
+                      ? "text-[#bd9f67]"
+                      : "text-gray-400 hover:text-[#bd9f67]"
+                  }
                 `}
               >
                 {/* Active indicator bar */}
@@ -54,4 +58,4 @@ export const Navbar: FC<NavbarProps> = ({ items }) => {
       </div>
     </nav>
   );
-}
+};

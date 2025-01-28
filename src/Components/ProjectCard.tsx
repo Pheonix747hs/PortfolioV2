@@ -58,7 +58,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({ repository }) => {
           <div className="flex place-content-start justify-between mb-4">
             <div className="flex items-center space-x-3"></div>
           </div>
-          <p className="text-[#bd9f67] text-base justify-center">
+          <p className="text-[#bd9f67] text-base justify-center h-[4.5rem] overflow-y-hidden overflow-ellipsis mx-[0.45rem] mt-[-2rem] md:mt-0 md:h-fit">
             {repository.description || "No description available"}
           </p>
           {
