@@ -2,8 +2,31 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { MdOutlineEmail } from "react-icons/md";
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaInstagram,
+  FaBootstrap,
+  FaCss3Alt,
+  FaDocker,
+  FaHtml5,
+  FaJava,
+  FaNodeJs,
+  FaPython,
+  FaReact,
+} from "react-icons/fa";
 import "../../styles.css";
+import { TbBrandCSharp, TbBrandReactNative } from "react-icons/tb";
+import {
+  SiSvelte,
+  SiTailwindcss,
+  SiMongodb,
+  SiMysql,
+  SiLaravel,
+  SiKubernetes,
+  SiScikitlearn,
+  SiPandas,
+} from "react-icons/si";
 
 interface TimelineEntry {
   title: string;
@@ -29,6 +52,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+  const iconSize =
+    typeof window !== "undefined" && window.innerWidth <= 768 ? 25 : 30;
 
   return (
     <div className="w-full font-sans md:px-10" ref={containerRef}>
@@ -59,12 +84,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           </p>
           {typeof window !== "undefined" && window.innerWidth > 768 ? (
             <div className="bg-[#1d1d1d91] backdrop-blur-sm  border-[#221D1D4D] rounded-2xl shadow-lg p-6 mt-10 text-white  mx-auto">
-              <h3 className="text-xl font-bold mb-4 text-[#b99757]">
+              <h3 className="text-3xl font-bold mb-4 text-[#b99757]">
                 Contact Me
               </h3>
 
-              <p className="text-xl flex gap-1 justify-center">
-                <MdOutlineEmail size={28} />
+              <p className="text-xl flex justify-center">
+                <MdOutlineEmail size={28} className="mr-2" />
                 ojasvinborawke@gmail.com
               </p>
 
@@ -109,17 +134,19 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           />
         </div>
         {typeof window !== "undefined" && window.innerWidth <= 768 ? (
-          <div className="bg-[#221D1D82] backdrop-blur-sm  border-[#221D1D4D] rounded-2xl shadow-lg p-1 text-white max-w-[26rem] mx-auto">
-            <h3 className="text-xl font-bold mb-4">Contact Me</h3>
+          <div className="bg-[#221D1D82] backdrop-blur-sm  border-[#221D1D4D] rounded-2xl shadow-lg p-4 text-white max-w-[26rem] mx-auto">
+            <h3 className="text-3xl font-bold mb-4 text-[#b99757]">
+              Contact Me
+            </h3>
 
-            <p className="text-sm p-2 flex gap-1">
+            <p className="text-lg p-2 flex gap-1 items-center">
               <MdOutlineEmail size={20} />
               ojasvinborawke@gmail.com
             </p>
 
             <div className="flex align-middle justify-center my-5 gap-10 ">
               <FaLinkedin
-                size={25}
+                size={28}
                 onClick={() => {
                   window.open(
                     "https://www.linkedin.com/in/ojasvin-borawke-0686b2236/",
@@ -130,7 +157,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               />
 
               <FaGithub
-                size={25}
+                size={28}
                 onClick={() => {
                   window.open("https://github.com/Pheonix747hs", "_blank");
                 }}
@@ -138,7 +165,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               />
 
               <FaInstagram
-                size={25}
+                size={28}
                 onClick={() => {
                   window.open("https://instagram.com/ojas._.b/", "_blank");
                 }}
@@ -150,7 +177,127 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           ""
         )}
       </div>
+      <div className="mt-5">
+        <div className="bg-[#221D1D82] backdrop-blur-sm border-[#221D1D4D] rounded-2xl shadow-lg p-6 text-white w-[85%] md:w-full max-w-[100rem] ml-14 md:mx-auto">
+          <h3 className="text-3xl font-bold mb-6 text-[#b99757]">Skills</h3>
 
+          <div className="md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:divide-x lg:divide-gray-600">
+            {/* Languages Section */}
+            <div className="mb-6 md:mb-3 lg:pr-4">
+              <h4 className="text-xl font-semibold mb-3 text-center">
+                Programming Languages
+              </h4>
+              <div className="grid grid-cols-2 gap-4 ">
+                <div className="flex items-center text-[1.31rem]">
+                  <TbBrandCSharp className="text-[#6543D8]" size={iconSize} />
+                  <span className="ml-[0.22rem]">C#</span>
+                </div>
+                <div className="flex items-center text-[1.31rem]">
+                  <FaJava className="text-[#3E75A4]" size={iconSize} />
+                  <span className="ml-[0.22rem]">Java</span>
+                </div>
+                <div className="flex items-center text-[1.31rem]">
+                  <FaPython className="text-[#FFD246]" size={iconSize} />
+                  <span className="ml-[0.22rem]">Python</span>
+                </div>
+              </div>
+              <div className="h-px bg-gray-600 my-6 md:hidden"></div>
+            </div>
+
+            {/* Frontend Section */}
+            <div className="mb-6 md:mb-0 lg:px-6">
+              <h4 className="text-xl font-semibold mb-3 text-center">
+                Frontend
+              </h4>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex items-center text-[1.31rem]">
+                  <FaHtml5 className="text-[#E4552D]" size={iconSize} />
+                  <span className="ml-[0.22rem]">HTML 5</span>
+                </div>
+                <div className="flex items-center text-[1.31rem]">
+                  <FaCss3Alt className="text-[#2D53E5]" size={iconSize} />
+                  <span className="ml-[0.22rem]">CSS</span>
+                </div>
+                <div className="flex items-center text-[1.31rem]">
+                  <SiTailwindcss className="text-[#08BBD9]" size={iconSize} />
+                  <span className="ml-[0.22rem]">Tailwind</span>
+                </div>
+                <div className="flex items-center text-[1.31rem]">
+                  <FaBootstrap className="text-[#8319FB]" size={iconSize} />
+                  <span className="ml-[0.22rem]">Bootstrap</span>
+                </div>
+                <div className="flex items-center text-[1.31rem]">
+                  <SiSvelte className="text-[#FF4408]" size={iconSize} />
+                  <span className="ml-[0.22rem]">Svelte</span>
+                </div>
+                <div className="flex items-center text-[1.31rem]">
+                  <FaReact className="text-[#66DBFB]" size={iconSize} />
+                  <span className="ml-[0.22rem]">ReactJS</span>
+                </div>
+              </div>
+              <div className="flex items-center text-[1.31rem] w-full mt-4">
+                <TbBrandReactNative
+                  className="text-[#66DBFB]"
+                  size={iconSize}
+                />
+                <span className="ml-[0.22rem]">React Native</span>
+              </div>
+              <div className="h-px bg-gray-600 my-6 md:hidden"></div>
+            </div>
+
+            {/* Backend Section */}
+            <div className="mb-6 md:mb-0 lg:px-6">
+              <h4 className="text-xl font-semibold mb-3 text-center">
+                Backend & Databases
+              </h4>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex items-center text-[1.31rem]">
+                  <FaNodeJs className="text-[#75AC67]" size={iconSize} />
+                  <span className="ml-[0.22rem]">NodeJS</span>
+                </div>
+                <div className="flex items-center text-[1.31rem]">
+                  <SiMongodb className="text-[#189556]" size={iconSize} />
+                  <span className="ml-[0.22rem]">MongoDB</span>
+                </div>
+                <div className="flex items-center text-[1.31rem]">
+                  <SiMysql className="text-[#08668E]" size={iconSize} />
+                  <span className="ml-[0.22rem]">MySQL</span>
+                </div>
+                <div className="flex items-center text-[1.31rem]">
+                  <SiLaravel className="text-[#FF3123]" size={iconSize} />
+                  <span className="ml-[0.22rem]">Laravel</span>
+                </div>
+              </div>
+              <div className="h-px bg-gray-600 my-6 md:hidden"></div>
+            </div>
+
+            {/* Tools & Technologies */}
+            <div className="lg:pl-6">
+              <h4 className="text-xl font-semibold mb-3 text-center">
+                Tools & Libraries
+              </h4>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex items-center text-[1.31rem]">
+                  <FaDocker className="text-[#1072D8]" size={iconSize} />
+                  <span className="ml-[0.22rem]">Docker</span>
+                </div>
+                <div className="flex items-center text-[1.31rem]">
+                  <SiKubernetes className="text-[#3871E6]" size={iconSize} />
+                  <span className="ml-[0.22rem]">Kubernetes</span>
+                </div>
+                <div className="flex items-center text-[1.31rem]">
+                  <SiScikitlearn className="text-[#F89C3F]" size={iconSize} />
+                  <span className="ml-[0.22rem]">SciKit-Learn</span>
+                </div>
+                <div className="flex items-center text-[1.31rem]">
+                  <SiPandas className="text-[#140C59]" size={iconSize} />
+                  <span className="ml-[0.22rem]">Pandas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div ref={ref} className="relative w-[80%] max-w-6xl mx-auto pb-20">
         {data.map((item, index) => (
           <div

@@ -18,7 +18,7 @@ export const Navbar: FC<NavbarProps> = ({ items }) => {
   return (
     <nav className="w-12 lg:w-[3.4rem] bg-[#1a1a1a] flex flex-col items-center py-6 fixed h-screen ">
       {/* Logo at the top */}
-      <div className="mb-12">
+      <div className="mt-4 md:mt-0 mb-12">
         <Code size={32} className="text-[#bd9f67] w-7 md:w-20" />
       </div>
 
